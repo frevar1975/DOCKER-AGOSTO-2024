@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  apache:
+    container_name: servidor_apache
+    build: ../build
+    restart: always
+    environment:
+      SERVER_NAME: www.prueba.com
+    ports:
+      - 8080:80
+    
